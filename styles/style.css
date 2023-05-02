@@ -233,38 +233,47 @@
 	overflow: hidden;
 }
 .main-slide-warp .main-slides {
+	position: relative;
 	display: flex;
 	flex-wrap: nowrap;
 	width: 100%;
+	height: 887px;
 	user-select: none;
 }
-.main-slide-warp .main-slides li {
+.main-slide-warp .main-slides .swiper-slide {
+	position: relative;
+	left: 0;
 	width: 100%;
 	flex-shrink: 0;
 	transition: left 0.15s;
 }
-.main-slide-warp .main-slides li img {
+.main-slide-warp .main-slides .swiper-slide img {
 	width: 100%;
 }
 .main-slide-warp .slide-indication {
 	display: flex;
 	gap: 10px;
+	width: auto;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 20px;
 }
-.main-slide-warp .slide-indication li {
+.main-slide-warp .slide-indication span {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
 	background: #fff;
 	text-indent: -999999em;
+	opacity: 1;
 	cursor: pointer;
 }
-.main-slide-warp .slide-indication li.on {
+.main-slide-warp .slide-indication .swiper-pagination-bullet-active {
 	background: #e93963;
 }
+/* .main-slide-warp .slide-indication li.on {
+	background: #e93963;
+} */
 
 
 /* main 콘텐츠 영역 */
@@ -285,7 +294,7 @@
 
 /* Best 콘텐츠 영역 */
 .best-content {
-
+	margin-bottom: 100px;
 }
 .card-contents-warp {
 	padding: 50px 54px 0;
