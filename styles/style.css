@@ -133,6 +133,10 @@
 	line-height: 80px;
 	margin-right: 60px;
 }
+#header .top-menu .reviewer-menu a img {
+	vertical-align: middle;
+	margin-top: -5px;
+}
 #header .top-menu .reviewer-menu::after {
 	content: "";
 	display: block;
@@ -150,6 +154,10 @@
 	font-weight: bold;
 	line-height: 80px;
 	margin-left: 50px;
+}
+#header .top-menu .advertiser-menu a img {
+	vertical-align: middle;
+	margin-top: -5px;
 }
 
 /* gnb 영역 */
@@ -219,12 +227,45 @@
 
 /* 메인 슬라이드 영역 */
 .main-slide-warp {
-	margin-bottom: 150px;
-}
-.main-slide-warp img {
+	position: relative;
 	width: 100%;
-	height: auto;
+	margin-bottom: 150px;
+	overflow: hidden;
 }
+.main-slide-warp .main-slides {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	user-select: none;
+}
+.main-slide-warp .main-slides li {
+	width: 100%;
+	flex-shrink: 0;
+	transition: left 0.15s;
+}
+.main-slide-warp .main-slides li img {
+	width: 100%;
+}
+.main-slide-warp .slide-indication {
+	display: flex;
+	gap: 10px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 20px;
+}
+.main-slide-warp .slide-indication li {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #fff;
+	text-indent: -999999em;
+	cursor: pointer;
+}
+.main-slide-warp .slide-indication li.on {
+	background: #e93963;
+}
+
 
 /* main 콘텐츠 영역 */
 .main-contents-area {
@@ -472,8 +513,6 @@
 }
 #footer .footer-inner-wrap .footer-btn > button {
 	height: 21px;
-	border: 0;
-	outline: 0;
 	background: #fff;
 	border-radius: 10px;
 	font-size: 12px;
