@@ -35,26 +35,49 @@
 	display: flex;
 	padding: 50px 54px 0;
 }
+.ranking-contents-wrap .ranking-content {
+	position: relative;
+}
+.ranking-contents-wrap .ranking-content::before {
+	content: "";
+	display: block;
+	width: 48px;
+	height: 63px;
+	position: absolute;
+	left: 10px;
+	top: 0;
+}
+.ranking-contents-wrap .first-place-content::before {
+	background: url('../images/first-place.png') 0 0 no-repeat;
+	width: 73px;
+	height: 95px;
+}
+.ranking-contents-wrap .second-place-content::before {
+	background: url('../images/second-place.png') 0 0 no-repeat;
+}
+.ranking-contents-wrap .third-place-content::before {
+	background: url('../images/third-place.png') 0 0 no-repeat;
+}
 .ranking-contents-wrap .ranking-content img {
-	border-radius: 8px;
+	border-radius: 12px;
 }
 .ranking-contents-wrap .ranking-content span {
 	display: block;
 	font-size: 25px;
 	font-weight: 700;
 	color: #fff;
-
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 8px;
 }
 .ranking-contents-wrap .first-place-content {
 	margin-right: 50px;
 }
 .ranking-contents-wrap .second-place-content {
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 }
 
 .ranking-contents-slide {
+	position: relative;
 	margin: 50px 54px 150px;
 }
 .ranking-contents-slide > ul {
@@ -67,7 +90,7 @@
 	margin-right: 0;
 }
 .ranking-contents-slide > ul > li img {
-	border-radius: 8px;
+	border-radius: 12px;
 }
 .ranking-contents-slide > ul > li span {
 	display: block;
@@ -76,6 +99,27 @@
 	font-size: 16px;
 	font-weight: 700;
 	margin-top: 5px;
+}
+.ranking-contents-slide .slide-btn {
+	position: absolute;
+	top: 50%;
+	/* transform: translateY(-50%); */
+	margin-top: -22px;
+	width: 100%;
+}
+.ranking-contents-slide .slide-btn > button {
+	position: absolute;
+	width: 43PX;
+	height: 44px;
+	cursor: pointer;
+}
+.ranking-contents-slide .slide-btn > button.prev-arrow {
+	left: -45px;
+	background: url('../images/ranking-slide-arrow-left.png') 0 0 no-repeat;
+}
+.ranking-contents-slide .slide-btn > button.next-arrow {
+	right: -45px;
+	background: url('../images/ranking-slide-arrow-right.png') 0 0 no-repeat;
 }
 
 /* 자동 슬라이드 영역 스타일 */
@@ -237,7 +281,7 @@
 	display: flex;
 	flex-wrap: nowrap;
 	width: 100%;
-	height: 887px;
+	/* height: 887px; */
 	user-select: none;
 }
 .main-slide-warp .main-slides .swiper-slide {

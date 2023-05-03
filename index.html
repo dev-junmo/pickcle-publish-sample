@@ -361,6 +361,10 @@
               <span>LG전자</span>
             </li>
           </ul>
+          <div class="slide-btn">
+            <button class="prev-arrow"></button>
+            <button class="next-arrow"></button>
+          </div>
         </div>
       </section>
 
@@ -484,6 +488,10 @@
               <span>날갱</span>
             </li>
           </ul>
+          <div class="slide-btn">
+            <button class="prev-arrow"></button>
+            <button class="next-arrow"></button>
+          </div>
         </div>
       </section>
 
@@ -609,23 +617,9 @@
     </footer>
   </div>
 
-  <!-- <script src="./script.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./script.js"></script>
   <script>
-    let swiper = new Swiper(".swiper", {
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      loop: true
-    });
   </script>
 </body>
 </html>
