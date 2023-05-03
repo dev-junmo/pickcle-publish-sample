@@ -18,6 +18,7 @@
 .main-contents-title > b {
 	color: #fff;
 	font-size: 25px;
+	margin-right: 5px;
 }
 .main-contents-subtitle {
 	display: block;
@@ -114,11 +115,11 @@
 	cursor: pointer;
 }
 .ranking-contents-slide .slide-btn > button.prev-arrow {
-	left: -45px;
+	left: -50px;
 	background: url('../images/ranking-slide-arrow-left.png') 0 0 no-repeat;
 }
 .ranking-contents-slide .slide-btn > button.next-arrow {
-	right: -45px;
+	right: -50px;
 	background: url('../images/ranking-slide-arrow-right.png') 0 0 no-repeat;
 }
 
@@ -470,7 +471,7 @@
 	position: relative;
 	width: 100%;
 	padding: 0 53px;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 .product-zone-slide-wrap ul {
 	display: flex;
@@ -515,6 +516,26 @@
 	line-height: 43px;
 	text-align: center;
 	color: #fff;
+}
+.product-slide-btn {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	margin-top: -40px;
+}
+.product-slide-btn > button {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+}
+.product-slide-btn > button.product-prev-arrow {
+	left: -110px;
+	background: url('../images/product-slide-arrow-left.png') 0 0 no-repeat;
+}
+.product-slide-btn > button.product-next-arrow {
+	right: 0;
+	background: url('../images/product-slide-arrow-right.png') 0 0 no-repeat;
 }
 
 /* 히딘 배너 */
